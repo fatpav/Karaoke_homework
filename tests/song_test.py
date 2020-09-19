@@ -2,6 +2,7 @@ import unittest
 
 from src.room import Room
 from src.guest import Guest
-from src.song import song
+from src.song import Song
 
-class KaraokeSongTest(unittest.TestCase):
+class TestSong(unittest.TestCase):
+    pass

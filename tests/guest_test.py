@@ -2,10 +2,10 @@ import unittest
 
 from src.room import Room
 from src.guest import Guest
-from src.song import song
+from src.song import Song
 
 
-class KaraokeGuestTest(unittest.TestCase):
+class TestGuest(unittest.TestCase):
 
     def setUp(self):
         guest_1 = Guest("Jimmy", 22, 100)
