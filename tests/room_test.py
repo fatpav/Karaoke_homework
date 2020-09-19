@@ -2,15 +2,21 @@ import unittest
 
 from src.room import Room
 from src.guest import Guest
+from src.song import Song
 
 class TestRoom(unittest.TestCase):
-    
-    def test_room_has_name(self):
+
+    def setUp(self):
         self.room = Room("Smashie's Palace")
-        self.assertEqual("Smashie's Palace", self.room.room_name)
+        
+    def test_room_has_name(self):
+        self.assertEqual("Smashie's Palace", self.room.name)
 
-    def test_check_guest_into_room(self):
-        self.guest_list = ["Jimmy", "June", "Suzie", "Bimble", "Spot"]
-        self.assertEqual(["Jimmy", "June", "Suzie", "Bimble", "Spot"], self.room.check_in)
+    def test_guest_can_join_room(self):
+        self.guest1 = "Jimmy"
+        self.guest2 = "Billy"
+        self.room.add_to_room(self.guest1)
+        self.room.add_to_room(self.guest2)
+        self.assertEqual(["Jimmy", "Billy"], self.room.guest_list)
 
-    
+    def check_guests_out
