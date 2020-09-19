@@ -1,9 +1,5 @@
 import unittest
-
-from src.room import Room
 from src.guest import Guest
-from src.song import Song
-
 
 class TestGuest(unittest.TestCase):
 
@@ -23,4 +19,4 @@ class TestGuest(unittest.TestCase):
     def test_guest_has_cash(self):
         self.assertEqual(100, self.guest_1.cash)
         self.assertEqual(150, self.guest_2.cash)
-        
+

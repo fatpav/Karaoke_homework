@@ -1,8 +1,13 @@
 import unittest
 
-from src.room import Room
-from src.guest import Guest
 from src.song import Song
 
 class TestSong(unittest.TestCase):
-    pass
+    def test_song_has_name(self):
+        self.song = Song("Cheapest Flight", "PREP")
+        self.assertEqual("Cheapest Flight", self.song.title)
+        
+    def test_song_has_artist(self):
+        self.song = Song("Cheapest Flight", "PREP")
+        self.assertEqual("PREP", self.song.artist)
+
