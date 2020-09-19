@@ -19,4 +19,21 @@ class TestRoom(unittest.TestCase):
         self.room.add_to_room(self.guest2)
         self.assertEqual(["Jimmy", "Billy"], self.room.guest_list)
 
-    def check_guests_out
+    def test_add_group_to_guestlist(self):
+        self.group = ["Jimmy", "Billy", "Bimmy", "Karen"]
+        self.room.add_group_to_room(self.group)
+        self.assertEqual(["Jimmy", "Billy", "Bimmy", "Karen"], self.room.guest_list)
+
+    def test_check_guests_out(self):
+        self.room.guest_list = ["Jimmy", "Billy", "Bimmy", "Karen"]
+        self.assertEqual(0, self.room.check_out_of_room(self.room.guest_list))
+
+    def test_add_songs_to_song_list(self):
+        self.song1 = Song("Sunburnt through the glass", "PREP")
+        self.song2 = Song("Olha Pipa", "Jorge Ben Jor")
+        self.song3 = Song("Mali Mali", "Disclosure")
+        self.room.add_to_playlist(self.song1)
+        self.room.add_to_playlist(self.song2)
+        self.room.add_to_playlist(self.song3)
+        self.assertEqual(["Sunburnt through the glass", "PREP"], self.room.song_list)
+
