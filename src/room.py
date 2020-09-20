@@ -8,7 +8,7 @@ class Room:
         self.guest_list.append(guest)
 
     def add_group_to_room(self, group):
-        self.guest_list.extend(group)
+        self.guest_list.append(group)
         return self.guest_list
 
     def check_out_of_room(self, guests):

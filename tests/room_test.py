@@ -22,7 +22,7 @@ class TestRoom(unittest.TestCase):
     def test_add_group_to_guestlist(self):
         self.group = ["Jimmy", "Billy", "Bimmy", "Karen"]
         self.room.add_group_to_room(self.group)
-        self.assertEqual(["Jimmy", "Billy", "Bimmy", "Karen"], self.room.guest_list)
+        self.assertEqual([self.group], self.room.guest_list)
 
     def test_check_guests_out(self):
         self.room.guest_list = ["Jimmy", "Billy", "Bimmy", "Karen"]
