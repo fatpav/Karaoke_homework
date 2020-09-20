@@ -17,6 +17,8 @@ class Room:
 
     def add_to_playlist(self, song):
         self.song_list.append(song)
+        return self.song_list
+        
     
 
     
